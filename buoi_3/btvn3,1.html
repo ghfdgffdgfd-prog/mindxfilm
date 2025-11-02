@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function printTriangle(n) {
+        for (let i = 1; i <= n; i++) {
+          let line = "";
+          for (let j = 1; j <= i; j++) {
+            line += j;
+          }
+          console.log(line);
+        }
+      }
+
+      function createPalindrome(str) {
+        let reversed = str.split("").reverse().join("");
+        let result = str + reversed.slice(1);
+        console.log(result);
+      }
+
+      printTriangle(5);
+      createPalindrome("abc");
+    </script>
+  </body>
+</html>

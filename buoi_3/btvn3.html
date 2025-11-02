@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getPositiveInteger() {
+        let n;
+        do {
+          n = parseInt(prompt("Nhập một số nguyên dương n:"));
+        } while (isNaN(n) || n <= 0);
+        return n;
+      }
+
+      function tinhTong(n) {
+        let Chan = 0;
+        let Le = 0;
+
+        for (let i = 1; i <= n; i++) {
+          if (i % 2 === 0) {
+            Chan += i;
+          } else {
+            Le += i;
+          }
+        }
+
+        console.log("Tổng các số chẵn từ 1 đến " + n + " là: " + Chan);
+        console.log("Tổng các số lẻ từ 1 đến " + n + " là: " + Le);
+      }
+
+      const n = getPositiveInteger();
+      tinhTong(n);
+    </script>
+  </body>
+</html>

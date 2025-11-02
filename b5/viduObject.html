@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cửa hàng máy tính</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>💻 Cửa hàng bán máy tính</h2>
+  <div class="container" id="product-list">
+
+  </div>
+  
+
+  <script>
+    // 1. Tạo dữ liệu sản phẩm
+    let Computers = [
+        {
+            name : "Macbook Pro M4",
+            ram : 16,
+            ssd : 512,
+            img: "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_4__7.png"
+        },
+        {
+            name : "Macbook Air M4",
+            ram : 16,
+            ssd : 256,
+            img: "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_4__7.png"
+        },
+        {
+            name : "Asus TUF Gaming",
+            ram : 32,
+            ssd : 1024,
+            img: "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_4__7.png"
+        },
+        {
+            name : "Thinkpad Carboon",
+            ram : 8,
+            ssd : 128,
+            img: "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_4__7.png"
+        }
+    ]
+
+    // 2. Lấy thẻ container
+    const container = document.getElementById("product-list");
+    
+    // 3. Lập trình đẩy dữ liệu
+    for (let i = 0; i < Computers.length; i++) {
+        let pc = Computers[i];  // lấy phần tử tại vị trí i của Computers
+
+        // lấy ra tên: pc.name  -> ${pc.name}
+        let html = `
+            <div class="card">
+                <img src="${pc.img}" alt="">   
+                <h3> ${pc.name} </h3>  
+                <h4> Ram: ${pc.ram} </h4>
+                <h4> SSD: ${pc.ssd} </h4>
+            </div>
+        `
+        // đẩy lên màn hình bằng innerHTML
+        container.innerHTML += html;
+    }
+
+  </script>
+
+
+  
+</body>
+</html>

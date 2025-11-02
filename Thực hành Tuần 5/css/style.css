@@ -1,0 +1,115 @@
+/* Thiết lập font chữ, màu nền chung cho body */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background-image: url("https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay làm tối ảnh nền để form nổi bật hơn */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Lớp phủ đen trong suốt */
+    z-index: -1; /* Đặt dưới nội dung body */
+}
+
+/* Container chính của form */
+.form-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 60px 68px 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Tiêu đề form */
+.form-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #fff;
+}
+
+/* Các trường input */
+.form-control {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+}
+
+.form-control:focus {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.5);
+}
+
+/* Placeholder text */
+.form-control::placeholder {
+  color: #8c8c8c;
+}
+
+.btn-primary {
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 24px;
+}
+
+.btn-primary:hover {
+  background-color: #f40612;
+  border: none;
+}
+
+.help-links {
+  margin-top: 20px;
+  color: #8c8c8c;
+  font-size: 0.9rem;
+}
+
+.help-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.help-links a:hover {
+  text-decoration: underline;
+}
+
+.alt-action {
+  margin-top: 66px;
+  color: #737373;
+  font-size: 1rem;
+}
+
+.alt-action a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.alt-action a:hover {
+  text-decoration: underline;
+}

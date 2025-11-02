@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #inputNumber {
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20pt;
+        padding: 5px 10px;
+      }
+
+      #submit {
+        width: 120px;
+        height: 60px;
+        background-color: rgb(0, 179, 255);
+        color: #ffffff;
+        border-radius: 5px;
+        font-size: 20pt;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hãy khởi tạo một Array Numbers</h1>
+    <h1>
+      Khi nhập số vào ô và submit, kết quả của array hiện ra trên màn hình
+    </h1>
+
+    <input type="text" id="inputNumber" />
+    <button id="submit">Submit</button>
+
+    <h2 id="result">Danh sách các phần tử trong array</h2>
+    <script>
+      let numbers = [];
+
+      let input = document.getElementById("input").value;
+      numbers.push(input);
+      document.getElementById("result").innerText =
+        "Danh sach phan tu trong Array" + numbers;
+    </script>
+  </body>
+</html>

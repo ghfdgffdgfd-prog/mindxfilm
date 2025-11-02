@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>btvn</title>
+  </head>
+  <body>
+    <h2>Danh sách người dùng</h2>
+    <ul id="userList"></ul>
+
+    <script>
+      let users = [
+        { id: 1, name: "An" },
+        { id: 2, name: "Bình" },
+        { id: 3, name: "Chi" },
+      ];
+
+      function renderUsers() {
+        const list = document.getElementById("userList");
+        list.innerHTML = "";
+        users.forEach((user) => {
+          const li = document.createElement("li");
+          li.textContent = `ID: ${user.id}, Tên: ${user.name}`;
+          list.appendChild(li);
+        });
+      }
+
+      renderUsers();
+
+      function addUser(id, name) {
+        users.push({ id, name });
+        renderUsers();
+      }
+
+      function updateUserName(id, newName) {
+        const user = users.find((u) => u.id === id);
+        if (user) {
+          user.name = newName;
+          renderUsers();
+        }
+      }
+
+      function deleteUser(id) {
+        users = users.filter((u) => u.id !== id);
+        renderUsers();
+      }
+
+      let person = {
+        name: "Dũng",
+        age: 25,
+        city: "Hà Nội",
+      };
+
+      person.email = "dung@example.com";
+
+      delete person.age;
+
+      console.log("Danh sách người dùng:", users);
+      console.log("Đối tượng person:", person);
+
+      addUser(4, "Đức");
+      updateUserName(2, "Bảo");
+      deleteUser(1);
+    </script>
+  </body>
+</html>

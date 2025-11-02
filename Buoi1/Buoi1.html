@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 400px;
+            height: 50px;
+            font-size: 24pt;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+        button {
+            width: 200px;
+            height:  50px;
+            font-size: 24pt;
+            padding: 10px;
+            background-color: rgb(0, 119, 255);
+            color: #ffffff;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" placeholder="Nhập tên"> <br>
+    <button id="smbtn">Nhập</button>
+    <h2 style="color: red;">Kết quả là:</h2>
+
+    <script>
+        const button = document.getElementById("smbtn");
+        button.onclick = function() {
+            alert("Xin chào các bạn");
+        }
+    </script>
+</body>
+</html>

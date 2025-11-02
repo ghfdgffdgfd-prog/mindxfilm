@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>btvn</title>
+  </head>
+  <body>
+    <h2>Danh sách người dùng</h2>
+    <ul id="userList"></ul>
+
+    <script>
+      // 1. Tạo mảng các user objects
+      let users = [
+        { id: 1, name: "An" },
+        { id: 2, name: "Bình" },
+        { id: 3, name: "Chi" },
+      ];
+
+      // Hàm hiển thị danh sách user
+      function renderUsers() {
+        const list = document.getElementById("userList");
+        list.innerHTML = "";
+        users.forEach((user) => {
+          const li = document.createElement("li");
+          li.textContent = `ID: ${user.id}, Tên: ${user.name}`;
+          list.appendChild(li);
+        });
+      }
+
+      renderUsers();
+
+      // 2. Thêm một object mới vào mảng
+      function addUser(id, name) {
+        users.push({ id, name });
+        renderUsers();
+      }
+
+      // 3. Cập nhật tên của user dựa trên id
+      function updateUserName(id, newName) {
+        const user = users.find((u) => u.id === id);
+        if (user) {
+          user.name = newName;
+          renderUsers();
+        }
+      }
+
+      // 4. Xóa user khỏi mảng dựa trên id
+      function deleteUser(id) {
+        users = users.filter((u) => u.id !== id);
+        renderUsers();
+      }
+
+      // 5. Tạo một đối tượng đại diện cho một người
+      let person = {
+        name: "Dũng",
+        age: 25,
+        city: "Hà Nội",
+      };
+
+      // Thêm thuộc tính email vào object
+      person.email = "dung@example.com";
+
+      // Xóa thuộc tính tuổi
+      delete person.age;
+
+      // In ra console để xem kết quả
+      console.log("Danh sách người dùng:", users);
+      console.log("Đối tượng person:", person);
+
+      // --- Ví dụ chạy thử ---
+      addUser(4, "Đức");
+      updateUserName(2, "Bảo");
+      deleteUser(1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dashboard.css"> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtirxgbbOQ9TjZssjlqa6MCwf6VGBECHvWMA&s" alt="Netflix Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Phim bộ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Phim lẻ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mới & Phổ biến</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Danh sách của tôi</a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-dark" type="button" onclick="logout()">Đăng xuất</button>
+                    <span class="profile-icon"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Phim, series không giới hạn và nhiều nội dung khác</h1>
+            <p>
+                Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-play"><i class="fas fa-play me-2"></i>Phát</button>
+                <button class="btn btn-info-more"><i class="fas fa-info-circle me-2"></i>Thông tin khác</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="movie-row">
+        <h2>Phim đang thịnh hành</h2>
+        <div class="movie-list">
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU-tpsd3eFNT_J4K3xVdk6Fa36KFi9PD8L2luBbWfB6p5_oXKdbOCJTlTMiQvMAUx35kKDlTi-oGddF3Sxo5UwrP7v86hDoeNtzR8KrEzz4qXlzYOCjPi55AMk6gAcohOcbh6ZJt3UobCKnIeMIdRcQ_HNvnnDSDDH99vpskoaLdTEI4Yxbv3z5HFVKOtECetVNxn7pn.jpg?r=fbd" alt="Phim 1"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQ05YNXw9_BmWmKVboYFzV4qTMtnhNzBk7eMf0lT22sYFihdsjK_cqTFd6etD3gCOU3xguOxfFJDvVw3dNrCiFllq2wZQb8N3sWp4fQQiHcZ90hU_Om62_lO-eLxcj4NJFTChsujodR1YqkI0Ak8zYY65kwwo4-EgosoyrcbHxjE.jpg?r=4cf" alt="Phim 2"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeDjztYutFLWwoG2NbM1ti9_ZQWdw--ifsj1tp9tAnSRufWfPsgNGdBYjUOCJzpeAqbhZ0HpF5tKHOsdbuqaJGiQOW3iICW2dV-_58ovDEpYOV3fgxMX7t9ZgURCuDbGf98t6EtZXa_h5N22BMb5zYYCNLCZ8QpI46-CGBgB_h13D4laExfZ0EHRAyJSLM8HzplUTNhBiJ9Q41qjgrxuykoPYatiq2ZNHbM.jpg?r=d52" alt="Phim 3"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYMgWTeDN-CmSdRRGnCegdo5NAihfjy4Wzbdw43Ae_CWjNcNqEB8hkXv9ft3eyUn70jTt-o5TMfMZzgYXbAqyTfrM0t2wmvHPgpiOmWoMu3_LJF_E-Etdin29leNQzcNCK-Q.jpg?r=790" alt="Phim 4"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaAS5dGrih5q-2yVmKPRaNXSaQTyYREJI4YOTc0JKfNNTEeX2vOWIkAA1eWB2I4pZu86dHC0CcOp4iqCBsiqxGf2Idz8mzjOA7mlLzCsNRlLWK6qhgOabG6QTux2KwmyTtMq.jpg?r=bd1" alt="Phim 5"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXIBwJAxe_zqiSqXYAG7HXD1weCBNR_SgrQLnazt-Q9-YEXsH1YjlUl8DKidQ1Bi1dsavurPXE3Q5EfoU4BWyMjHMmCQ69LKbbYsTPfX9SBwH-si_dmfsvXTcZ1hz3Djy_TA.jpg?r=b54" alt="Phim 6"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABS50as4rixoc7xbxi-NS7DxA8r51chafVlmLlTsT92G3KOqleh-lS-3samuPsF7Fmxjja-CvhFReHns0TT-LFJaoSkdpDVMw_fflv_Gp1rZESndjwnJUqld9-qWyOyEJM74L.jpg?r=13c" alt="Phim 7"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSlcjkLrZ52HsGW9NQQ8Ko2p4g9j3UupkiZuJxL8OoZAvVbgtgnbMFIootP8wPHjwP55XmNFaETXSRIF4oxnqxyXXZ5ITE2cdviUjlXRWzwrpMw1ClGNL0WOuuVfb1EMTjg6.jpg?r=3dd" alt="Phim 8"></div>
+        </div>
+    </section>
+
+    <section class="movie-row mt-5">
+        <h2>Phim được đề xuất</h2>
+        <div class="movie-list">
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABb9olZk11OKYMpHhpKfDUgxz-Ur8HZl-RUHB8-upgsyjM7dVkI03isL69ZpezVtApcf_YVt_ILSQpw9mVO4iuQNGP-26tYEYPmv1vj8zbagTR-EVfp-hhJxeuBmt4ewh5cutBQNBk4lxlmmIY28Wu63cGKVbx96fImEs9lXiC8xGZCWgywGhqQ_TfOefGH0.jpg?r=b78" alt="Phim 9"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYZ5cqGYyrjeudc9MJCkOpmKdLPnJp0oRVlzzkuj6W4JZev8aMfUf5ywAwA5QMQPXpfrbbuVy--E7Uc-nt540F7TaAGV_djiF3GgMvzTXPMcOG3IvMHDao0t99VU8Z53yVJu.jpg?r=cf4" alt="Phim 10"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQRflOMovBCBvwh4DEhaw7KyNIvGxEV2EP4MlPBDMzXoDHGQx85ZjyGNJnpeH9JsuAgWQhGMd-ZnROQFXtRDWijLceGukSYZbs32C9zgSHpr2WLjeevKxvOs61-EfGM5ZLaIuWHVWLXPG9gQ6znb4VQYP5BFhF1ia14vHSwQ4HyUD7vhsEzliSFhbWX8FxRoU1YFykhdmR64GFM-Cf8yxeNkgxu-nxV8wQ.jpg?r=273g" alt="Phim 11"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSjoj7X4jS_HYoRa4JiIZ0G1j3WoAtVlFW2ZVut07J6OgE25A67Est-Duxo8RwmFAkKEylCThT3V8RDf0dyGc7yE9I4aakVJS_Q.jpg?r=878" alt="Phim 12"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZmMmrLwbi5g_9ptrSwayxvdY9lpvT6665CC50F-lYNDeZdxdFYREdnA5gE9c8CZcHUvGvaMCmTTBrhC_Uv-cOmggf9Q9X5caOUSVLDKUWUSbFhVujNb7MEBkzHOS77TTe9q1IObkvds_88CKHbbIR-w91OUm5Lyznp6sWzhEw.jpg?r=e1b" alt="Phim 13"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCt3qcIqKXh-ZTcVh_Q24XzHhyZISgyZLYlf6wVTdeLlyWArJejbXQvUDW24lAB3hiqO1EvYIlxDn-fVCKOkKjPHpGmluDnJdY.jpg?r=85e" alt="Phim 14"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf70TU0s36jXkfRr8ZLq40K08iMQPgLr_gLQvvMKpdrlXteTAFCP4xIJyfUDq5bdQgkuXZUqoGvpaZfAwMokWEhlSe6woWdCl3lwaQcMJq4twS8zGDFMK76O6gyv1NDHfKQh.jpg?r=3b5" alt="Phim 15"></div>
+            <div class="movie-item"><img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZ95uVRFzaWc785xzJWC1p4xmmsUIqUVeVfRpJvgbQ7jD3k1XV1S8TnN3q1CLOhbuh3UGT9S08ZwvX43ng8spTM72G1i0neqhT0.jpg?r=d00" alt="Phim 16"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#">Câu hỏi thường gặp</a>
+                    <a href="#">Quan hệ nhà đầu tư</a>
+                    <a href="#">Cách xem</a>
+                    <a href="#">Thông tin công ty</a>
+                    <a href="#">Chỉ có trên Netflix</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">Trung tâm trợ giúp</a>
+                    <a href="#">Việc làm</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                    <a href="#">Liên hệ với chúng tôi</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">Tài khoản</a>
+                    <a href="#">Đổi thẻ quà tặng</a>
+                    <a href="#">Quyền riêng tư</a>
+                    <a href="#">Kiểm tra tốc độ</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">Trung tâm truyền thông</a>
+                    <a href="#">Mua thẻ quà tặng</a>
+                    <a href="#">Tùy chọn cookie</a>
+                    <a href="#">Thông báo pháp lý</a>
+                </div>
+            </div>
+            <p class="mt-4">Mã dịch vụ</p>
+            <p>&copy; 2024 Netflix, Inc.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <script>
+        
+    </script>
+</body>
+</html>
